@@ -4,13 +4,13 @@ import java.util.Collection;
 
 public class BubbleSort {
     
-    private Collection<?> data;
+    private Collection<? extends Number> data;
     
-    public BubbleSort(Collection<?> data) {
+    public BubbleSort(Collection<? extends Number> data) {
         this.data = data;
     }
     
-    public Collection<?> getData() {
+    public Collection<? extends Number> getData() {
         return data;
     }
     
