@@ -17,7 +17,7 @@ public class BubbleSortTest {
         List<Integer> exp = new LinkedList<>(Arrays.asList(1, 2, 3, 5, 6, 7, 9));
         BubbleSort bubble = new BubbleSort(data);
         bubble.sort();
-        List<Integer> act = bubble.getData().stream().map(o -> (Integer) o).collect(Collectors.toList());
+        List<Integer> act = bubble.getData().stream().collect(Collectors.toList());
 
         Assert.assertEquals(exp, act);
     }

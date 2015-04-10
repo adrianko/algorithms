@@ -1,20 +1,23 @@
 package main.sorting;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class BubbleSort {
     
-    private Collection<? extends Number> data;
+    private Collection<Integer> data;
     
-    public BubbleSort(Collection<? extends Number> data) {
+    public BubbleSort(Collection<Integer> data) {
         this.data = data;
     }
     
-    public Collection<? extends Number> getData() {
+    public Collection<Integer> getData() {
         return data;
     }
     
     public void sort() {
+        ArrayList<Integer> arr = new ArrayList<>(getData());
+        
         
     }
     
