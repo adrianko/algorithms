@@ -2,6 +2,7 @@ package main.sorting;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 public class BubbleSort {
     
@@ -17,16 +18,11 @@ public class BubbleSort {
     
     public void sort() {
         ArrayList<Integer> arr = new ArrayList<>(getData());
-        int swap;
         
         for (int i = 0; i < (getData().size() - 1); i++) {
             for (int j = 0; j < getData().size() - i - 1; j++) {
                 if (arr.get(j) > arr.get(j + 1)) {
-                    swap = arr.get(j);
-                    arr.add(j, arr.get(j + 1));
-                    arr.remove(j + 1);
-                    arr.add(j + 1, swap);
-                    arr.remove(j + 2);
+                    Collections.swap(arr, j, j + 1);
                 }
             }
         }
