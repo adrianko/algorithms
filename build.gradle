@@ -6,7 +6,11 @@ repositories {
 
 dependencies {
     compile 'junit:junit:4.12'
+}
 
+configurations {
+    unitTestCompile.extendsFrom runtime
+    unitTestRuntime.extendsFrom unitTestCompile
 }
 
 sourceSets {
@@ -15,6 +19,16 @@ sourceSets {
             srcDir 'src'
         }
     }
+    unitTest {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+task unitTest(type: Test, dependsOn: assemble) {
+    testClassesDir = sourceSets.unitTest.output.classesDir
+    classpath = sourceSets.unitTest.runtimeClasspath
 }
 
 task BubbleSort(type: JavaExec) {
