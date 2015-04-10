@@ -5,8 +5,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BubbleSortTest {
     
@@ -16,7 +18,7 @@ public class BubbleSortTest {
         List<Integer> exp = new LinkedList<>(Arrays.asList(1, 2, 3, 5, 6, 7, 9));
         BubbleSort bubble = new BubbleSort(data);
         bubble.sort();
-        List<Integer> act = bubble.getData();
+        List<Integer> act = bubble.getData().stream().map(o -> (int) o).collect(Collectors.toList());
 
         Assert.assertEquals(exp, act);
     }
