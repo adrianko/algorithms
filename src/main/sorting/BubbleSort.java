@@ -9,18 +9,12 @@ import java.util.Collections;
  * is larger than the right element. After every pass the next largest element will be in the correct position. Repeat 
  * until no swaps are made in a pass or until the total number of passes is equal to the number of elements.
  */
-public class BubbleSort {
-    
-    private Collection<Integer> data;
-    
+public class BubbleSort extends Sort {
+
     public BubbleSort(Collection<Integer> data) {
-        this.data = data;
+        super(data);
     }
-    
-    public Collection<Integer> getData() {
-        return data;
-    }
-    
+
     public void sort() {
         ArrayList<Integer> arr = new ArrayList<>(getData());
         
@@ -32,7 +26,7 @@ public class BubbleSort {
             }
         }
         
-        data = arr;
+        super.setData(arr);
     }
     
 }
