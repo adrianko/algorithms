@@ -17,11 +17,11 @@ public class MergeSort extends AbstractSort {
         mergesort(0, arr.size() - 1);
     }
 
-    public void mergesort(int low, int high) {
+    private void mergesort(int low, int high) {
 
     }
 
-    public void merge(int low, int middle, int high) {
+    private void merge(int low, int middle, int high) {
 
     }
 
