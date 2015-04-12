@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 /**
- * Quick Sort - O(n^2) - Select middle element of array as pivot. All elements which are smaller than the pivot are
+ * Quick Sort - O(n log n) - Select middle element of array as pivot. All elements which are smaller than the pivot are
  * placed in one array and all the elements which are larger are placed in another array. Sort both arrays by
  * recursively applying quick sort to them. Finally, combine arrays.
  */
