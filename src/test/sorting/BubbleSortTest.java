@@ -2,6 +2,7 @@ package test.sorting;
 
 import main.sorting.BubbleSort;
 
+import main.sorting.AbstractSort;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class BubbleSortTest {
     public void testSortInteger() {
         List<Integer> data = new LinkedList<>(Arrays.asList(2, 6, 1, 5, 3, 9, 7));
         List<Integer> exp = new LinkedList<>(Arrays.asList(1, 2, 3, 5, 6, 7, 9));
-        BubbleSort bubble = new BubbleSort(data);
+        AbstractSort bubble = new BubbleSort(data);
         bubble.sort();
         List<Integer> act = bubble.getData().stream().collect(Collectors.toList());
 

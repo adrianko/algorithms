@@ -9,7 +9,7 @@ import java.util.Collections;
  * placed in one array and all the elements which are larger are placed in another array. Sort both arrays by
  * recursively applying quick sort to them. Finally, combine arrays.
  */
-public class QuickSort extends Sort {
+public class QuickSort extends AbstractSort {
 
     private ArrayList<Integer> arr;
 

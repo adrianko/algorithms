@@ -9,7 +9,7 @@ import java.util.Collections;
  * is larger than the right element. After every pass the next largest element will be in the correct position. Repeat 
  * until no swaps are made in a pass or until the total number of passes is equal to the number of elements.
  */
-public class BubbleSort extends Sort {
+public class BubbleSort extends AbstractSort {
 
     public BubbleSort(Collection<Integer> data) {
         super(data);
