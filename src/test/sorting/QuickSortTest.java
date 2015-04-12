@@ -1,7 +1,7 @@
 package test.sorting;
 
 import main.sorting.QuickSort;
-import main.sorting.AbstractSort;
+import main.sorting.Sort;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ public class QuickSortTest {
     public void testSortInteger() {
         List<Integer> data = new LinkedList<>(Arrays.asList(2, 6, 1, 5, 3, 9, 7));
         List<Integer> exp = new LinkedList<>(Arrays.asList(1, 2, 3, 5, 6, 7, 9));
-        AbstractSort quick = new QuickSort(data);
+        Sort quick = new QuickSort(data);
         quick.sort();
         List<Integer> act = quick.getData().stream().collect(Collectors.toList());
 
