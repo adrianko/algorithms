@@ -19,7 +19,7 @@ sourceSets {
             srcDir 'src'
         }
     }
-    unitTest {
+    test {
         java {
             srcDir 'src'
         }
@@ -27,11 +27,6 @@ sourceSets {
 }
 
 task unitTest(type: Test, dependsOn: assemble) {
-    testClassesDir = sourceSets.unitTest.output.classesDir
-    classpath = sourceSets.unitTest.runtimeClasspath
-}
-
-task BubbleSort(type: JavaExec) {
-    main = 'main.sorting.BubbleSort'
-    classpath = sourceSets.main.runtimeClasspath
+    testClassesDir = sourceSets.test.output.classesDir
+    classpath = sourceSets.test.runtimeClasspath
 }
