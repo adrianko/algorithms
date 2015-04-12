@@ -3,6 +3,10 @@ package main.sorting;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Merge Sort - O(n log n) - Divide the unsorted list into n sublists, each containing 1 element. Repeatedly merge
+ * ublists to produce new sorted sublists until there is only 1 list remaining.
+ */
 public class MergeSort extends AbstractSort {
 
     private ArrayList<Integer> arr;
