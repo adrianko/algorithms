@@ -1,6 +1,6 @@
 package test.sorting;
 
-import main.sorting.QuickSort;
+import main.sorting.MergeSort;
 import main.sorting.Sort;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,13 +8,13 @@ import org.junit.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class QuickSortTest extends SortTest {
+public class MergeSortTest extends SortTest {
 
     @Test
     public void testSortInteger() {
-        Sort quick = new QuickSort(getData());
-        quick.sort();
-        List<Integer> act = quick.getData().stream().collect(Collectors.toList());
+        Sort merge = new MergeSort(getData());
+        merge.sort();
+        List<Integer> act = merge.getData().stream().collect(Collectors.toList());
 
         Assert.assertEquals(getExp(), act);
     }
