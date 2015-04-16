@@ -12,6 +12,19 @@ public class HeapSort extends AbstractSort {
     @Override
     public void sort() {
         ArrayList<Integer> arr = new ArrayList<>(getData());
+        int count = arr.size();
+        heapify(arr, count);
+        int end = count - 1;
+        
+        while (end > 0) {
+            int temp = arr.get(end);
+            arr.set(end, arr.get(0));
+            arr.set(0, temp);
+            siftDown(arr, 0, end - 1);
+            end--;
+        }
+        
+        setData(arr);
     }
     
     public void heapify(ArrayList<Integer> arr, int count) {
