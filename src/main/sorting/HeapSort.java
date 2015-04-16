@@ -15,7 +15,12 @@ public class HeapSort extends AbstractSort {
     }
     
     public void heapify(ArrayList<Integer> arr, int count) {
+        int start = (count - 2) / 2;
         
+        while (start >= 0) {
+            siftDown(arr, start, count - 1);
+            start--;
+        }
     }
     
     public void siftDown(ArrayList<Integer> arr, int start, int end) {
