@@ -31,6 +31,12 @@ public class CocktailSort extends AbstractSort {
             
             swapped = false;
             
+            for (int i = arr.size() - 2; i >= 0; i--) {
+                if (arr.get(i) > arr.get(i + 1)) {
+                    Collections.swap(arr, i, i + 1);
+                    swapped = true;
+                }
+            }
         } while (swapped);
     }
     
