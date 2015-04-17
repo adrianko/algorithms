@@ -25,6 +25,12 @@ public class CocktailSort extends AbstractSort {
                 }
             }
             
+            if (!swapped) {
+                break;
+            }
+            
+            swapped = false;
+            
         } while (swapped);
     }
     
