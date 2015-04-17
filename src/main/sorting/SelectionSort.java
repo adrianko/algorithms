@@ -2,6 +2,7 @@ package main.sorting;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Selection Sort - O(n^2) - Array is divided into nominal sorted and unsorted sublists. At every step, the algorithm 
@@ -27,9 +28,7 @@ public class SelectionSort extends AbstractSort {
                 }
             }
             
-            int smaller = arr.get(index);
-            arr.set(index, arr.get(i));
-            arr.set(i, smaller);
+            Collections.swap(arr, index, i);
         }
         
         setData(arr);
