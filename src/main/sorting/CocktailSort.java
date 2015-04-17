@@ -38,6 +38,8 @@ public class CocktailSort extends AbstractSort {
                 }
             }
         } while (swapped);
+        
+        setData(arr);
     }
     
 }
