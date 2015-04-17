@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Cocktail Sort - O(n^2) - A bidirectional bubble sort. The first pass will start at the left and finish at the right 
+ * and place the largest element in the correct place. The second pass starts on the right and moves towards the left 
+ * shifting the smallest element into the correct place. This shortens the list after every pass, reducing the number of
+ * elements that need to be checked at every pass.
+ */
 public class CocktailSort extends AbstractSort {
     
     public CocktailSort(Collection<Integer> data) {
