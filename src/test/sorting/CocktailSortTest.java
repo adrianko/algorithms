@@ -14,7 +14,7 @@ public class CocktailSortTest extends SortTest {
     public void testSortInteger() {
         Sort cocktail = new CocktailSort(getData());
         cocktail.sort();
-        List<Integer> act = cocaktail.getData().stream().collect(Collectors.toList());
+        List<Integer> act = cocktail.getData().stream().collect(Collectors.toList());
 
         Assert.assertEquals(getExp(), act);
     }
