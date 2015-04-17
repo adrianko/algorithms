@@ -2,6 +2,7 @@ package main.sorting;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 public class HeapSort extends AbstractSort {
     
@@ -47,9 +48,7 @@ public class HeapSort extends AbstractSort {
             }
             
             if (arr.get(root) < arr.get(child)) {
-                int temp = arr.get(root);
-                arr.set(root, arr.get(child));
-                arr.set(child, temp);
+                Collections.swap(arr, root, child);
                 root = child;
             } else {
                 return;
