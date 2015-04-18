@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Comb Sort - O(n log n) - An exchange sort similar to bubble sort but differs where the gap between elements starts 
+ * off very large and gets smaller with every pass. 
+ */
 public class CombSort extends AbstractSort {
     
     public CombSort(Collection<Integer> data) {
