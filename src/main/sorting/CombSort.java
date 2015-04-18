@@ -2,6 +2,7 @@ package main.sorting;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 public class CombSort extends AbstractSort {
     
@@ -19,7 +20,18 @@ public class CombSort extends AbstractSort {
             if (gap > 1) {
                 gap = (int) (gap / 1.3);
             }
+            
+            swapped = false;
+            
+            for (int i = 0; (i + gap) < arr.size(); i++) {
+                if (arr.get(i).compareTo(arr.get(i + gap)) > 0) {
+                    Collections.swap(arr, i + gap, i);
+                    swapped = true;
+                }
+            }
         }
+        
+        setData(arr);
     }
     
 }
