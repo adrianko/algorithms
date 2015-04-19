@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Gnome Sort - O(n log n) - Similar to insertion sort except moving an element to its proper place is accomplished by 
+ * a series of swaps, as in Bubble Sort.
+ */
 public class GnomeSort extends AbstractSort {
     
     public GnomeSort(Collection<Integer> data) {
