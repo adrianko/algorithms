@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Permutation Sort - O(too long) - Generates all permutations until sorted one is found
+ */
 public class PermutationSort extends AbstractSort {
 
     public PermutationSort(Collection<Integer> data) {
