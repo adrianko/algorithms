@@ -1,9 +1,12 @@
 package main.sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * Radix Sort - O(nk) - A non comparative integer sorting algorithm that sorts data with integer keys by grouping keys 
+ * by the individual digits which share the same significant position and value.
+ */
 public class RadixSort extends AbstractSort {
     
     public RadixSort(Collection<Integer> data) {
