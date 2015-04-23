@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Counting Sort - O(n + k) - Based on keys between a specific range. Works by counting the number of objects having 
+ * distinct key values. Then doing some arithmetic to calculate the position of each object in the output sequence.
+ */
 public class CountingSort extends AbstractSort {
     
     public CountingSort(Collection<Integer> data) {
