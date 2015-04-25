@@ -12,7 +12,7 @@ public class BogoSortTest extends SortTest {
 
     @Test
     public void testSortInteger() {
-        Sort bubble = new BogoSort(getData());
+        Sort bogo = new BogoSort(getData());
         bogo.sort();
         List<Integer> act = bogo.getData().stream().collect(Collectors.toList());
 
