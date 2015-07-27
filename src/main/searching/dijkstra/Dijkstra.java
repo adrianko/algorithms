@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * Dijkstra's algorithm - a graph algorithm that finds the shortest path from a single vertex in a weighted graph to all 
+ * other vertices in the graph. Works for directed and undirected graphs, but requires non-negative edge weights.
+ */
 public class Dijkstra {
     
     public static void computePaths(Vertex source) {
