@@ -64,8 +64,7 @@ public class Dijkstra {
         
         for (Vertex v : vertices) {
             System.out.println("Distance to " + v + ": " + v.minDistance);
-            List<Vertex> path = getShortestPathTo(v);
-            System.out.println("Path: " + path);
+            System.out.println("Path: " + getShortestPathTo(v));
         }
     }
     
