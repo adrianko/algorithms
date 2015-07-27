@@ -1,5 +1,8 @@
 package main.searching.dijkstra;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class Dijkstra {
@@ -25,6 +28,18 @@ public class Dijkstra {
                 }
             }
         }
+    }
+    
+    public static List<Vertex> getShortestPathTo(Vertex target) {
+        List<Vertex> path =  new ArrayList<>();
+        
+        for (Vertex v = target; v != null; v = v.previous) {
+            path.add(v);
+        }
+
+        Collections.reverse(path);
+        
+        return path;
     }
     
 }
