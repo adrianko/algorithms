@@ -58,7 +58,15 @@ public class Dijkstra {
         v4.adjacencies = new Edge[]{new Edge(v5, 133.04)};
         v5.adjacencies = new Edge[]{new Edge(v0, 81.77), new Edge(v3, 62.05), new Edge(v4,134.47), new Edge(v6, 91.63)};
         v6.adjacencies = new Edge[]{new Edge(v3, 97.24), new Edge(v5, 87.94)};
+        
         Vertex[] vertices = { v0, v1, v2, v3, v4, v5, v6 };
+        computePaths(v0);
+        
+        for (Vertex v : vertices) {
+            System.out.println("Distance to " + v + ": " + v.minDistance);
+            List<Vertex> path = getShortestPathTo(v);
+            System.out.println("Path: " + path);
+        }
     }
     
 }
